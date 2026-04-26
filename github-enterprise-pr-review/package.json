@@ -1,0 +1,26 @@
+{
+  "name": "github-enterprise-pr-review-skill",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Enterprise GitHub pull request review skill for Copilot Chat",
+  "type": "module",
+  "bin": {
+    "geprr": "./dist/src/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json && npm run package:lite",
+    "package:lite": "node scripts/package-lite.mjs",
+    "start": "node dist/src/cli.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.0",
+    "vitest": "^2.1.0"
+  }
+}

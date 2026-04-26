@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "GEC: Debug TS",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--loader", "tsx"],
+      "program": "${workspaceFolder}/src/cli.ts",
+      "args": ["--lang", "en"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "GEC: Debug Dist",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/dist/src/cli.js",
+      "args": ["--lang", "en"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}
